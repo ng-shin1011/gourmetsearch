@@ -1,0 +1,259 @@
+/* HTML全体 */
+html{
+  height: 100%;
+}
+/* BODY全体 */
+body{
+  margin: 0;
+  font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
+}
+/* ヘッダー */
+header{
+  width: 100%;
+  height: 70px;
+  padding-left: 5px;
+  border-bottom: 3px double #ccc;
+  background-color: #fffaf4;
+}
+#title_img{
+  float: left;
+  padding-top: 25px;
+  padding-left: 1%;
+  width:  30px;
+}
+#head h1{
+  font-family: 'M PLUS Rounded 1c', sans-serif !important;
+  float: left;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+/* フォーム部分 */
+#form{
+  clear: both;
+  height: 155px;
+  overflow: hidden;
+}
+/* 店舗検索 */
+#form_store{
+  float: left;
+  height: 150px;
+  margin-left: 30px;
+}
+#form_store h1{
+  font-size: 18px;
+  margin-top: 0;
+}
+#range{
+  height: 33px;
+	overflow: hidden;
+  position: relative;
+  display: inline-block;
+}
+#range {
+  height: 33px;
+  width: 145px;
+	border: 1px solid #bbbbbb;
+	border-radius: 5px;
+	background: #ffffff;
+	overflow: hidden;
+}
+#range::before {
+	position: absolute;
+	top: 0.8em;
+	right: 0.9em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+#range select{
+  font-size: 15px;
+  height: 33px;
+  width: 145px;
+  padding-left: 5px;
+	color: #666666;
+	cursor: pointer;
+	text-indent: 0.01px;
+	text-overflow: ellipsis;
+	border: none;
+	outline: none;
+	background: transparent;
+	background-image: none;
+	box-shadow: none;
+	-webkit-appearance: none;
+}
+#txtStoreSearch,#txtPlaceSearch{
+  font-size: 13px;
+  height: 30px;
+  vertical-align: top;
+}
+#btnStoreSearch,#btnPlaceSearch{
+  width: 33px;
+  height: 36px;
+  background-image:url(img/search.png);
+  background-color: rgb(58, 171, 210);
+  background-size: auto 17px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+/* マップ検索 */
+#form_map{
+  float: left;
+  height: 160px;
+  margin-left: 21%;
+  margin-right: 3%;
+}
+#form_map h1{
+  font-size: 18px;
+  margin-top: 0;
+}
+
+#btnCurrent{
+  width: 100px;
+  padding: 0.5em;
+  margin: 10px 0;
+  display: block;
+  color: #fff;
+  background: rgb(58, 171, 210);
+  text-decoration: none;
+  font-size:12px;
+  border-radius: 3px;
+  text-align:center;
+  text-decoration:none;
+}
+#btnCurrent:before{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 2px 0 -5px;
+  background-image: url(img/current.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+#place{
+  float: left;
+  margin: 0;
+}
+#errPlace,#errRange{
+  margin-left: 10px;
+  color: red;
+  font-size: 80%;
+}
+#notice{
+  font-size: 80%;
+  text-align: right;
+  width: 95%;
+}
+
+/* 検索結果・マップ表示部分 */
+#disp{
+  margin-top: 0;
+  clear: both;
+}
+/* Google Map部分 */
+#map {
+  float: left;
+  width:  75%;
+  height: 600px;
+  overflow: hidden;
+}
+/* 検索結果リスト部分 */
+#list{
+  background-color:#faf8f5;;
+  float: left;
+  width:  20%;
+  margin-left: 1%;
+  height: 600px;
+  overflow: scroll;
+  border: 1px solid #ccb;
+}
+div[class^="entry-body-"]{
+  float: left;
+  padding: 2%;
+  width: 95%;
+  height: auto;
+  border-top: 1px solid #ccc;
+}
+.shop_img{
+  float: left;
+  width:  25%;
+  height: auto;
+}
+.list_cnt{
+  padding-left: 1%;
+  padding-bottom: 1%;
+}
+.item-info{
+  float: left;
+  padding-left: 1%;
+  width: 70%;
+}
+.item-title{
+  font-size:90%;
+  font-weight: 700;
+}
+.item-title a,
+.item-title_w a{
+  text-decoration :none;
+}
+.item-category{
+  font-size:80%;
+}
+.item-access{
+  font-size:80%;
+}
+
+/* infoWindowレイアウト */
+.infoWindow-body{
+  width: 100%;
+  overflow: scroll;
+}
+.item-info_w{
+  width: 65%;
+  padding-left: 3%;
+  padding-right: 3%;
+  float: left;
+}
+.shop_img_w{
+  width: 25%;
+  height: 25%;
+  float: left;
+}
+.item-title_w{
+  font-size: 120%;
+  font-weight: 700;
+}
+.item-category_w,
+.item-tel_w,
+.item-address_w,
+.item-access_w,
+.item-opentime_w,
+.item-holiday_w{
+  padding-bottom: 1%;
+}
+/* 備考 */
+#remarks{
+  float: left;
+  width: 100%;
+  margin-left: 1%;
+}
+#remarks ul{
+  padding-left: 0;
+  margin-top: 0;
+  font-size: 80%;
+  list-style: none;
+}
+
+/* フッター */
+footer{
+  float: left;
+  margin-left: 1%;
+  font-size: 80%;
+}

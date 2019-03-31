@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c:300,400,500,700,800,900&amp;subset=japanese" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://maps.google.com/maps/api/js?key={API_KEY}&language=ja"></script>
+    <link rel="shortcut icon" href="img/title.png" />
+    <title>ぐるめさーち</title>
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header>
+      <div id="head">
+        <img id="title_img" src="img/title.png">
+        <h1>ぐるめさーち</h1>
+      </div>
+    </header>
+
+    <!-- 検索フォーム -->
+    <div id="form">
+      <!-- 地点変更 -->
+      <div id="form_map">
+      <h1>マップの表示地点を変更する</h1>
+        <div id="current">
+          <a href="#" id="btnCurrent">現在地を表示</a>
+        </div>
+        <div id="place">
+          <input id="txtPlaceSearch" type="text" size="30" placeholder="地名・住所から表示 [例:梅田]">
+          <input id="btnPlaceSearch" type="button" >
+        </div>
+        <div id="errPlace"></div>
+      </div>
+      <!-- 店舗検索 -->
+      <div id="form_store">
+        <h1>周辺のお店を検索する</h1>
+        <div id="range">
+          <select class="select">
+            <option value="" hidden>検索範囲を指定</option>
+            <option value="1">300m</option>
+            <option value="2">500m</option>
+            <option value="3">1000m</option>
+          </select>
+        </div>
+        <div id="freeword">
+          <input id="txtStoreSearch" type="text" size="30" placeholder="キーワード検索 [例:カフェ]">
+          <input id="btnStoreSearch" type="button">
+        </div>
+        <div id="errRange"></div>
+      </div>
+    </div>
+
+    <!-- マップとリストを表示 -->
+    <div id="notice">
+      <p>※地図の読み込みに時間がかかる場合があります。</p>
+    </div>
+    <!-- マップとリストを表示 -->
+    <div id="disp">
+      <div id="list">
+        <div class="list_cnt"></div>
+        <div class="list_store">
+          <div class="entry-body">
+          </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <!-- javascriptの処理 -->
+    <script type="text/javascript" src="action.js"></script>
+
+    <!-- 備考 -->
+    <div id="remarks">
+      <ul>
+        <li>※検索結果は最大１００件です。</li>
+      </ul>
+    </div>
+  </body>
+
+  <!-- footer -->
+  <footer>
+    Supported by <a href="https://api.gnavi.co.jp/api/scope/" target="_blank">ぐるなびWebService</a>
+  </footer>
+</html>
