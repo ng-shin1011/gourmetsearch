@@ -7,37 +7,74 @@ body{
   margin: 0;
   font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', メイリオ, Meiryo, 'ＭＳ Ｐゴシック', sans-serif;
 }
-/* ヘッダー */
-header{
+#head {
+  display: flex;
   width: 100%;
-  height: 70px;
+  height: 60px;
   padding-left: 5px;
   border-bottom: 3px double #ccc;
   background-color: #fffaf4;
 }
 #title_img{
-  float: left;
-  padding-top: 25px;
+  padding-top: 7px;
   padding-left: 1%;
   width:  30px;
+  height:   30px;
 }
 #head h1{
+  margin-top: 0;
   font-family: 'M PLUS Rounded 1c', sans-serif !important;
-  float: left;
   font-size: 30px;
   font-weight: 900;
 }
 
 /* フォーム部分 */
 #form{
-  clear: both;
-  height: 155px;
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
 }
+/* マップ検索 */
+#form_map h1{
+  font-size: 18px;
+  margin-top: 0;
+}
+#btnCurrent{
+  width: 100px;
+  padding: 0.5em;
+  margin: 10px 0;
+  display: block;
+  color: #fff;
+  background: rgb(58, 171, 210);
+  text-decoration: none;
+  font-size:12px;
+  border-radius: 3px;
+  text-align:center;
+  text-decoration:none;
+}
+#btnCurrent:before{
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin: -3px 2px 0 -5px;
+  background-image: url(img/current.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}
+#place{
+  margin: 0;
+}
+#errPlace,
+#errRange{
+  margin-left: 10px;
+  color: red;
+  font-size: 80%;
+}
+
 /* 店舗検索 */
 #form_store{
-  float: left;
-  height: 150px;
   margin-left: 30px;
 }
 #form_store h1{
@@ -101,53 +138,9 @@ header{
   background-position: center;
   background-repeat: no-repeat;
 }
-/* マップ検索 */
-#form_map{
-  float: left;
-  height: 160px;
-  margin-left: 21%;
-  margin-right: 3%;
-}
-#form_map h1{
-  font-size: 18px;
-  margin-top: 0;
-}
-
-#btnCurrent{
-  width: 100px;
-  padding: 0.5em;
-  margin: 10px 0;
-  display: block;
-  color: #fff;
-  background: rgb(58, 171, 210);
-  text-decoration: none;
-  font-size:12px;
-  border-radius: 3px;
-  text-align:center;
-  text-decoration:none;
-}
-#btnCurrent:before{
-  content: "";
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin: -3px 2px 0 -5px;
-  background-image: url(img/current.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  vertical-align: middle;
-}
-#place{
-  float: left;
-  margin: 0;
-}
-#errPlace,#errRange{
-  margin-left: 10px;
-  color: red;
-  font-size: 80%;
-}
+/* 注釈 */
 #notice{
-  font-size: 80%;
+  font-size: 75%;
   text-align: right;
   width: 95%;
 }
@@ -240,15 +233,29 @@ div[class^="entry-body-"]{
 }
 /* 備考 */
 #remarks{
-  float: left;
+  display: flex;
   width: 100%;
   margin-left: 1%;
 }
-#remarks ul{
-  padding-left: 0;
+#remarks p{
   margin-top: 0;
   font-size: 80%;
-  list-style: none;
+}
+
+/* 主な機能 */
+#function{
+  width: 100%;
+  margin-left: 1%;
+}
+#function h1{
+  padding-left: 0;
+  margin-bottom: 0;
+  font-size: 100%;
+}
+#function ul{
+  margin-top: 0;
+  list-style: circle;
+  font-size: 90%;
 }
 
 /* フッター */
